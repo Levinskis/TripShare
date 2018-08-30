@@ -51,14 +51,6 @@ class Main extends Component {
     console.log(this.state.slide);
     return (
       <div className="app">
-        <div className="upload">
-          <FilePond
-            onaddfile={this.onAddFile}
-            ref={ref => (this.pond = ref)}
-            allowMultiple={true}
-            allowFileEncode
-          />
-        </div>
         {/* {this.state.files.length > 0 && (
           <VrVideo2
             controls={true}
@@ -114,6 +106,14 @@ class Main extends Component {
             </div>
           </div>
         )}
+        <div className="upload">
+          <FilePond
+            onaddfile={this.onAddFile}
+            ref={ref => (this.pond = ref)}
+            allowMultiple={true}
+            allowFileEncode
+          />
+        </div>
       </div>
     );
   }
