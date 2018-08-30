@@ -3,6 +3,7 @@ import { FilePond, File, registerPlugin } from "react-filepond";
 // Import FilePond styles
 import "filepond/dist/filepond.min.css";
 import VrVideo2 from "./VrVideo2.js";
+import VrPhoto from "./VrPhoto.js";
 
 import "./Main.css";
 import "normalize.css";
@@ -48,22 +49,11 @@ class Main extends Component {
     //   player = videoVr("my-video");
     //   player.vr({ projection: "360" });
     // }
-    console.log(this.state.slide);
+    console.log(this.state.files[this.state.slide]);
     return (
       <div className="app">
         {/* {this.state.files.length > 0 && (
-          <VrVideo2
-            controls={true}
-            sources={[
-              {
-                src: this.state.files[this.state.slide].fileUrl,
-                type: "video/mp4"
-              }
-            ]}
-            // src={this.state.files[this.state.slide].fileUrl}
-            vr={this.state.files[this.state.slide].vr}
-            // videoType={this.state.files[this.state.slide].videoType}
-          />
+          <VrPhoto src={this.state.files[this.state.slide].fileUrl} />
         )} */}
         {this.state.files.length > 0 && (
           <div className="galeryWrapper">
@@ -89,6 +79,9 @@ class Main extends Component {
                       // videoType={this.state.files[this.state.slide].videoType}
                     />
                   </div>
+                ) : this.state.files[this.state.slide].type === "image" &&
+                this.state.files[this.state.slide].vr ? (
+                  <VrPhoto src={this.state.files[this.state.slide].fileUrl} />
                 ) : (
                   <div style={{ maxWidth: "800px" }}>
                     <img

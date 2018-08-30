@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "360-image-viewer": "^1.0.1",
+    "canvas-fit": "^1.5.0",
     "filepond-plugin-file-encode": "^1.0.5",
     "google-map-react": "^1.0.6",
     "normalize.css": "^8.0.0",
