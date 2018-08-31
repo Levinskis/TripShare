@@ -83,7 +83,7 @@ class Main extends Component {
                 this.state.files[this.state.slide].vr ? (
                   <VrPhoto src={this.state.files[this.state.slide].fileUrl} />
                 ) : (
-                  <div style={{ maxWidth: "800px" }}>
+                  <div >
                     <img
                       src={this.state.files[this.state.slide].fileUrl}
                       style={{ width: "100%" }}
