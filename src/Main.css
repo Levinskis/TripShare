@@ -41,4 +41,10 @@
 .content {
   width: 90vw;
   height: auto;
+  align-self: center;
+}
+
+body{
+background-color: rgb(220,220,220);
+
 }
