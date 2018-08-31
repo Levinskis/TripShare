@@ -60,7 +60,7 @@ class Main extends Component {
             <div className="galery">
               <div>
                 <div className="prev" onClick={this.prev}>
-                  Prev
+                 <i class="fas fa-angle-left"></i> 
                 </div>
               </div>
               <div className="content">
@@ -83,7 +83,7 @@ class Main extends Component {
                 this.state.files[this.state.slide].vr ? (
                   <VrPhoto src={this.state.files[this.state.slide].fileUrl} />
                 ) : (
-                  <div >
+                  <div>
                     <img
                       src={this.state.files[this.state.slide].fileUrl}
                       style={{ width: "100%" }}
@@ -93,7 +93,7 @@ class Main extends Component {
               </div>
               <div>
                 <div className="next" onClick={this.next}>
-                  Next
+                 <i class="fas fa-angle-right"></i> 
                 </div>
               </div>
             </div>
